@@ -10,6 +10,7 @@ const LANG_ICON = (
 // TODO: this function is used inside the `LanguageButton`, but is marked as
 // unused by the LSP, at the moment I don't know how to disable this warning
 // without an ugly workaround (like false calling)
+// TODO: deduplify this function
 function clickOutside(elem: Element, accessor: () => any) {
   const onClick = (e: any) => !elem.contains(e.target) && accessor()?.();
   document.body.addEventListener("click", onClick);
@@ -52,18 +53,18 @@ export default function LanguageButton() {
         </button>
       </div>
       <Show when={clicked()}>
-        <div class="absolute right-4 z-10 mt-1 w-48 origin-top-right bg-zinc-50 shadow-sm ring-1 ring-zinc-700 ring-opacity-5">
+        <div class="absolute right-4 z-10 mt-[10px] sm:mt-2 w-48 origin-top-right bg-zinc-50 shadow-sm ring-1 ring-zinc-700 ring-opacity-25">
           <For each={availLangs()}>
             {(l, _) => (
               <a
-                class="block cursor-pointer px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100 hover:ring-1 hover:ring-zinc-700 hover:ring-opacity-15 active:bg-zinc-200"
+                class="block cursor-pointer px-4 py-2 text-lg sm:text-sm text-zinc-700 hover:bg-zinc-100 hover:ring-1 hover:ring-zinc-700 hover:ring-opacity-15 active:bg-zinc-200"
                 role="menuitem"
                 onClick={() => {
                   setLang(l.code);
                 }}
               >
                 <div class="flex items-center">
-                  <img class="h-4 pr-2 " src={l.image} />
+                  <img class="h-4 pr-2" src={l.image} />
                   {l.name}
                 </div>
               </a>

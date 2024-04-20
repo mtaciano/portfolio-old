@@ -1,11 +1,12 @@
-import { Title } from "@solidjs/meta";
+import PrefixTitle from "~/components/PrefixTitle";
 
 export default function Blog() {
   return (
     <>
-      <Title>Miguel Taciano | Blog</Title>
-      <main class="text-center mx-auto text-stone-700 p-4">
-        <h1 class="text-8xl font-bold mt-28">Blog Page Under Construction.</h1>
+      <PrefixTitle>Blog</PrefixTitle>
+      <main class="text-center text-stone-700">
+        <h1 class="font-bold text-4xl sm:text-6xl mt-40">
+        Blog Page <br/> Under Construction.</h1>
       </main>
     </>
   );

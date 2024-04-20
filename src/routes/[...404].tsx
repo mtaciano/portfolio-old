@@ -9,9 +9,9 @@ export default function NotFound() {
   const { lang } = Language;
 
   return (
-    <main class="text-center mx-auto text-zinc-700 p-4">
+    <main class="text-center text-zinc-700">
       <h1 class="font-mono text-8xl font-bold mt-28">404</h1>
-      <h2 class="text-2xl">{NOT_FOUND[lang()]}</h2>
+      <h2 class="text-2xl mb-32">{NOT_FOUND[lang()]}</h2>
     </main>
   );
 }

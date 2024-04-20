@@ -1,12 +1,21 @@
-import { Title } from "@solidjs/meta";
+import Language from "~/components/Language";
+import PrefixTitle from "~/components/PrefixTitle";
+
+const TITLE: { [key: string]: string } = {
+  en: "Projects",
+  ptbr: "Projetos",
+};
 
 export default function Projects() {
+  const { lang } = Language;
+  const title = () => TITLE[lang()];
+
   return (
     <>
-      <Title>Miguel Taciano | Projects</Title>
-      <main class="text-center mx-auto text-stone-700 p-4">
-        <h1 class="text-8xl font-bold mt-28">
-          Projects Page Under Construction.
+      <PrefixTitle>{title()}</PrefixTitle>
+      <main class="text-center text-stone-700">
+        <h1 class="font-bold text-4xl sm:text-6xl mt-40">
+          Projects Page <br /> Under Construction.
         </h1>
       </main>
     </>

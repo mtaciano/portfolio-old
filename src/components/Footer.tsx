@@ -5,11 +5,19 @@ const THANKS: { [key: string]: string } = {
   ptbr: "Ícones providenciados por",
 };
 
+const MADE_WITH: { [key: string]: Array<string> } = {
+  en: ["Made with", "and"],
+  ptbr: ["Feito com", "e"],
+};
+
 export default function Footer() {
   const { lang } = Language;
+  const thanks = () => THANKS[lang()];
+  const madeWith = () => MADE_WITH[lang()];
+
   return (
     <>
-      <footer class="text-sm border-t border-t-stone-400 text-center mx-auto max-w-md text-stone-400 pt-4 pb-2 mt-16">
+      <footer class="text-sm border-t border-t-stone-400 text-center mx-auto max-w-xs sm:max-w-md text-stone-400 pt-4 pb-2 mt-16">
         <p class="inline-block text-stone-500 mx-auto mb-1 border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700">
           <a href={"/pubkeys/mtaciano.ssh.pub"} download>
             <abbr
@@ -57,13 +65,31 @@ export default function Footer() {
           </a>
         </div>
         <p class="pt-2">
-          {THANKS[lang()]}{" "}
+          {thanks()}{" "}
           <a
             class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
             href="https://simpleicons.org"
             target="_blank"
           >
             Simple Icons
+          </a>
+        </p>
+        <p class="pt-2">
+          {madeWith()[0]}{" "}
+          <a
+            class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
+            href="https://docs.solidjs.com/solid-start"
+            target="_blank"
+          >
+            SolidStart
+          </a>{" "}
+          {madeWith()[1]}{" "}
+          <a
+            class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
+            href="https://tailwindcss.com/"
+            target="_blank"
+          >
+            Tailwind CSS
           </a>
         </p>
       </footer>
