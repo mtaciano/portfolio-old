@@ -103,11 +103,11 @@ export default function Home() {
     <>
       <Title>Miguel Taciano</Title>
       <main class="text-center text-stone-700">
-        <h1 class="font-serif text-6xl sm:text-8xl mt-8 sm:mt-12 mb-2">
+        <h1 class="font-serif text-6xl sm:text-8xl mt-12 mb-2">
           Miguel Taciano
         </h1>
-        <h2 class="font-serif text-2xl sm:text-4xl mb-4 sm:mb-6">{job()}</h2>
-        <article class="text-xl sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
+        <h2 class="font-serif text-2xl sm:text-4xl mb-6">{job()}</h2>
+        <article class="text-lg sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
           {intro()}
         </article>
       </main>
