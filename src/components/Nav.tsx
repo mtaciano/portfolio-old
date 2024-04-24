@@ -70,6 +70,7 @@ export default function Nav() {
           </div>
         </ul>
       </div>
+
       <div class="block sm:hidden h-[3.25em]">
         <div use:clickOutside={() => setClicked(false)}>
           <div
@@ -83,7 +84,7 @@ export default function Nav() {
         </div>
         <ul class="container flex items-center p-2 text-zinc-700">
           <Show when={clicked()}>
-            <ul class="text-2xl absolute grid left-[3vw] z-10 mt-[21rem] p-2 w-[94vw] origin-top-left bg-zinc-50 shadow-sm ring-1 ring-zinc-700 ring-opacity-25">
+            <ul class="text-xl absolute grid left-[3vw] z-10 mt-[19.75rem] p-2 w-[94vw] origin-top-left bg-zinc-50 shadow-sm ring-1 ring-zinc-700 ring-opacity-25">
               <li
                 class={`border-b-2 border-l-2 ${active("/")} px-3 mx-1.5 py-2`}
               >
