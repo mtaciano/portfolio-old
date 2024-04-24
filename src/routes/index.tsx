@@ -106,8 +106,13 @@ export default function Home() {
         <h1 class="font-serif text-6xl sm:text-8xl mt-12 mb-2">
           Miguel Taciano
         </h1>
-        <h2 class="font-serif text-2xl sm:text-4xl mb-6">{job()}</h2>
+        <h2 class="font-serif text-2xl sm:text-4xl mb-4 sm:mb-6">{job()}</h2>
         <article class="text-lg sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
+          <img
+            class="sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-full overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
+            src="/images/profile.jpeg"
+            alt="Profile picture"
+          />
           {intro()}
         </article>
       </main>
