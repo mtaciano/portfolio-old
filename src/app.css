@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-zinc-100;
+  }
   /* Roboto Mono */
   @font-face {
     font-family: "Roboto Mono";

@@ -4,8 +4,8 @@ import Language from "~/components/Language";
 import Anchor from "~/components/Anchor";
 
 const JOB: { [key: string]: string } = {
-  en: "Computer Engineer",
-  ptbr: "Engenheiro de Computação",
+  en: "Computer::Engineer",
+  ptbr: "Engenheiro::de::Computação",
 };
 
 const INTRODUCTION: { [key: string]: () => JSX.Element } = {
@@ -36,14 +36,14 @@ const INTRODUCTION: { [key: string]: () => JSX.Element } = {
         <Anchor href="https://github.com/mtaciano/fpgmips" target="_blank">
           32-bit RISC CPU
         </Anchor>{" "}
-        using FPGAs (Field-Programmable Gate Arrays) and Verilog, for which a
-        subset of the C programming language called{" "}
+        using FPGAs (Field-Programmable Gate Arrays) and Verilog, for which I
+        also developed an accompanying compiler based on a{" "}
         <Anchor href="https://github.com/mtaciano/cmc" target="_blank">
-          C-
+          small subset
         </Anchor>{" "}
-        was developed. My current side project is a{" "}
+        of the C programming language. My current side project is a{" "}
         <Anchor href="https://github.com/mtaciano/sol" target="_blank">
-          rewrite
+          complete rewrite
         </Anchor>{" "}
         of it, with better code, more features and fewer bugs!
       </p>
@@ -54,18 +54,19 @@ const INTRODUCTION: { [key: string]: () => JSX.Element } = {
       <p>
         Olá! Eu sou um recém-formado engenheiro de computação pela{" "}
         <Anchor href="https://www.unifesp.br" target="_blank">
-          Universidade Federal de São Paulo
-        </Anchor>
-        . Eu tenho interesse em diversos campos relacionados a computação.
-        Alguns exemplos são: desenvolvimento web, segurança e criptografia,
-        desenvolvimento de linguagens de programação, sistemas embarcados e
-        mais. Minhas linguagens mais utilizadas atualmente são C, Python e Rust.
+          Unifesp
+        </Anchor>{" "}
+        (Universidade Federal de São Paulo). Eu tenho interesse em diversos
+        campos relacionados a computação. Alguns exemplos são: desenvolvimento
+        web, segurança e criptografia, desenvolvimento de linguagens de
+        programação, sistemas embarcados e mais. Minhas linguagens mais
+        utilizadas atualmente são C, Python e Rust.
       </p>
       <p class="mt-4">
-        Durante meu tempo na universidade, o campo de pesquisa que mais investi
-        foi o de aprendizado de máquina (principalmente aprendizado por reforço)
-        e visão computacional. Durante esse período, eu desenvolvi uma abordagem
-        de{" "}
+        Durante meu tempo na universidade, o campo de pesquisa em que mais
+        investi foi o de aprendizado de máquina (principalmente aprendizado por
+        reforço) e visão computacional. Durante esse período, eu desenvolvi uma
+        abordagem de{" "}
         <Anchor href="https://doi.org/10.5753/wvc.2023.27545" target="_blank">
           resolução de quebra-cabeças
         </Anchor>{" "}
@@ -75,13 +76,12 @@ const INTRODUCTION: { [key: string]: () => JSX.Element } = {
       <p class="mt-4">
         Meu outro grande projeto foi o desenvolvimento de um{" "}
         <Anchor href="https://github.com/mtaciano/fpgmips" target="_blank">
-          Processador 32-bit RISC
+          processador 32-bit RISC
         </Anchor>{" "}
         utilizando FPGAs (Field-Programmable Gate Arrays) e Verilog, o qual
-        envolveu também o desenvolvimento de um subconjunto da linguagem C
-        chamado{" "}
+        envolveu também o desenvolvimento de um compilador para um pequeno{" "}
         <Anchor href="https://github.com/mtaciano/cmc" target="_blank">
-          C-
+          subconjunto da linguagem C
         </Anchor>
         . Meu projeto atual é o desenvolvimento de um{" "}
         <Anchor href="https://github.com/mtaciano/sol" target="_blank">
@@ -103,13 +103,17 @@ export default function Home() {
     <>
       <Title>Miguel Taciano</Title>
       <main class="text-center text-stone-700">
-        <h1 class="font-serif text-6xl sm:text-8xl mt-12 mb-2">
-          Miguel Taciano
-        </h1>
-        <h2 class="font-serif text-2xl sm:text-4xl mb-4 sm:mb-6">{job()}</h2>
+        <div class="flex justify-center w-full">
+          <h1 class="underline decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
+            Miguel Taciano
+          </h1>
+        </div>
+        <h2 class="font-mono font-medium tracking-tight text-xl sm:text-4xl mb-4 sm:mb-10">
+          {job()}
+        </h2>
         <article class="text-lg sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
           <img
-            class="sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-full overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
+            class="sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-3xl overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
             src="/images/profile.jpeg"
             alt="Profile picture"
           />

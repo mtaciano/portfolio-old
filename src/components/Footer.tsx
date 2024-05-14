@@ -2,7 +2,7 @@ import Language from "~/components/Language";
 
 const THANKS: { [key: string]: string } = {
   en: "Icons by",
-  ptbr: "Ícones providenciados por",
+  ptbr: "Ícones por",
 };
 
 const MADE_WITH: { [key: string]: Array<string> } = {
@@ -17,8 +17,8 @@ export default function Footer() {
 
   return (
     <>
-      <footer class="text-sm border-t border-t-stone-400 text-center mx-auto max-w-xs sm:max-w-md text-stone-400 pt-4 pb-2 mt-16">
-        <p class="inline-block text-stone-500 mx-auto mb-1 border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700">
+      <footer class="text-sm border-t border-t-stone-400 text-center mx-auto max-w-xs sm:max-w-md text-stone-400 pt-4 pb-2 mt-12">
+        <p class="transition-all duration-200 inline-block text-stone-500 mx-auto mb-1 border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950">
           <a href={"/pubkeys/mtaciano.ssh.pub"} download>
             <abbr
               class="no-underline"
@@ -30,7 +30,7 @@ export default function Footer() {
           </a>
         </p>
         <br />
-        <p class="inline-block text-stone-500 mx-auto mb-1 border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700">
+        <p class="transition-all duration-200 inline-block text-stone-500 mx-auto mb-1 border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950">
           <a href={"/pubkeys/mtaciano.gpg.asc"} download>
             <abbr
               class="no-underline"
@@ -67,7 +67,7 @@ export default function Footer() {
         <p class="pt-2">
           {thanks()}{" "}
           <a
-            class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
+            class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://simpleicons.org"
             target="_blank"
           >
@@ -77,7 +77,7 @@ export default function Footer() {
         <p class="pt-2">
           {madeWith()[0]}{" "}
           <a
-            class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
+            class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://docs.solidjs.com/solid-start"
             target="_blank"
           >
@@ -85,7 +85,7 @@ export default function Footer() {
           </a>{" "}
           {madeWith()[1]}{" "}
           <a
-            class="inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-stone-700 hover:text-stone-700"
+            class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://tailwindcss.com/"
             target="_blank"
           >
