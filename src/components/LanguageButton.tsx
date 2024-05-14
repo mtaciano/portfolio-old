@@ -53,11 +53,11 @@ export default function LanguageButton() {
         </button>
       </div>
       <Show when={clicked()}>
-        <div class="absolute right-4 z-10 mt-[10px] sm:mt-2 w-48 origin-top-right bg-stone-50 shadow-sm ring-1 ring-stone-700 ring-opacity-25 rounded-sm">
+        <div class="absolute right-4 z-10 mt-[10px] sm:mt-2 w-48 origin-top-right bg-stone-50 shadow-sm ring-1 ring-stone-800 ring-opacity-25 rounded-sm">
           <For each={availLangs()}>
             {(l, _) => (
               <a
-                class="block cursor-pointer px-4 py-2 text-lg sm:text-sm text-stone-700 hover:bg-stone-100 hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-15 active:bg-stone-200"
+                class="block cursor-pointer px-4 py-2 text-lg sm:text-sm text-stone-800 hover:bg-stone-100 hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-15 active:bg-stone-200"
                 role="menuitem"
                 onClick={() => {
                   setLang(l.code);

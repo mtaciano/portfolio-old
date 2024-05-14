@@ -58,9 +58,9 @@ export default function MobileNav() {
               <div class="bg-stone-50 mt-1 w-6 h-1" />
             </div>
           </div>
-          <ul class="container flex items-center p-2 text-stone-700">
+          <ul class="container flex items-center p-2 text-stone-800">
             <Show when={clicked()}>
-              <ul class="text-xl rounded-sm font-semibold absolute grid left-[3vw] z-10 mt-[18.25rem] p-2 w-[94vw] origin-top-left bg-stone-50 shadow-sm ring-1 ring-stone-700 ring-opacity-25">
+              <ul class="text-xl rounded-sm font-semibold absolute grid left-[3vw] z-10 mt-[18.25rem] p-2 w-[94vw] origin-top-left bg-stone-50 shadow-sm ring-1 ring-stone-800 ring-opacity-25">
                 <li class={`${active("/")} px-3 mx-1.5 my-2`}>
                   <a class="inline-grid w-full" href="/">
                     {TABS[lang()][0]}

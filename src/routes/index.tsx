@@ -102,18 +102,18 @@ export default function Home() {
   return (
     <>
       <Title>Miguel Taciano</Title>
-      <main class="text-center text-stone-700">
+      <main class="text-center text-stone-800">
         <div class="flex justify-center w-full">
-          <h1 class="underline underline-offset-[6px] sm:underline-offset-8 decoration-[6px] sm:decoration-8 decoration-cyan-500 sm:decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
+          <h1 class="text-cyan-950 underline underline-offset-[6px] sm:underline-offset-8 decoration-[6px] sm:decoration-8 decoration-cyan-500 sm:decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
             Miguel Taciano
           </h1>
         </div>
-        <h2 class="font-mono font-medium tracking-tight text-xl sm:text-4xl mb-4 sm:mb-10">
+        <h2 class="text-cyan-950 font-mono font-medium tracking-tight text-xl sm:text-4xl mb-4 sm:mb-10">
           {job()}
         </h2>
         <article class="text-lg sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
           <img
-            class="sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-3xl overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
+            class="transition-all duration-200 sm:hover:-rotate-2 sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-3xl overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
             src="/images/profile.jpeg"
             alt="Profile picture"
           />
