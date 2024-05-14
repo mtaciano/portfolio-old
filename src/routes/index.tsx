@@ -104,7 +104,7 @@ export default function Home() {
       <Title>Miguel Taciano</Title>
       <main class="text-center text-stone-700">
         <div class="flex justify-center w-full">
-          <h1 class="underline decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
+          <h1 class="underline decoration-cyan-500 sm:decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
             Miguel Taciano
           </h1>
         </div>
