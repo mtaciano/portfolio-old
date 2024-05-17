@@ -120,7 +120,7 @@ export default function Home() {
         <article class="text-lg sm:text-base text-justify mx-6 sm:max-w-xl sm:mx-auto leading-relaxed sm:leading-loose">
           <img
             class="transition-all duration-200 sm:hover:-rotate-2 sm:float-left h-32 w-32 sm:h-40 sm:w-40 rounded-3xl overflow-hidden mx-auto mb-4 sm:mb-0 sm:mr-3"
-            src="/images/profile.jpeg"
+            src="/images/profile.avif"
             alt="Profile picture"
           />
           {intro()}
