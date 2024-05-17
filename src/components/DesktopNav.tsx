@@ -28,7 +28,7 @@ export default function DesktopNav() {
 
   return (
     <>
-      <nav class="hidden sm:block bg-cyan-600">
+      <div class="hidden sm:block bg-cyan-600">
         <ul class="font-medium container flex items-center sm:max-w-none p-2 text-stone-50">
           <li
             class={`transition-all duration-200 border-b-2 ${active("/")} px-1 mx-1.5 md:mx-3`}
@@ -59,7 +59,7 @@ export default function DesktopNav() {
             <LanguageButton />
           </div>
         </ul>
-      </nav>
+      </div>
     </>
   );
 }

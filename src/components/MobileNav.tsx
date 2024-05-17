@@ -46,7 +46,7 @@ export default function MobileNav() {
 
   return (
     <>
-      <nav class="block sm:hidden bg-cyan-500">
+      <div class="block sm:hidden bg-cyan-500">
         <div class="h-[3.25em]">
           <div use:clickOutside={() => setClicked(false)}>
             <div
@@ -93,7 +93,7 @@ export default function MobileNav() {
             </div>
           </ul>
         </div>
-      </nav>
+      </div>
     </>
   );
 }
