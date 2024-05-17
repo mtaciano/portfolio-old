@@ -1,4 +1,4 @@
-import { Title } from "@solidjs/meta";
+import { Title, Meta } from "@solidjs/meta";
 import { JSX } from "solid-js";
 import Language from "~/components/Language";
 import Anchor from "~/components/Anchor";
@@ -102,6 +102,12 @@ export default function Home() {
   return (
     <>
       <Title>Miguel Taciano</Title>
+      <Meta name="description" content="Miguel Taciano's Portfolio" />
+      <Meta
+        name="keywords"
+        content="SolidJS, SolidStart, TailwindCSS, Portfolio, Computer Engineer, Unifesp"
+      />
+
       <main class="text-center text-stone-800">
         <div class="flex justify-center w-full">
           <h1 class="text-cyan-950 underline underline-offset-[6px] sm:underline-offset-8 decoration-[6px] sm:decoration-8 decoration-cyan-500 sm:decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
