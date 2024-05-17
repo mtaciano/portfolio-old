@@ -47,19 +47,30 @@ export default function Footer() {
             href="https://www.linkedin.com/in/mtaciano"
             target="_blank"
           >
-            <img title="LinkedIn" width="28em" src="/svg/linkedin.svg" />
+            <img
+              title="LinkedIn"
+              width="28em"
+              height="auto"
+              src="/svg/linkedin.svg"
+            />
           </a>
           <a
             class="mx-2"
             href="https://www.github.com/mtaciano"
             target="_blank"
           >
-            <img title="GitHub" width="28em" src="/svg/github.svg" />
+            <img
+              title="GitHub"
+              width="28em"
+              height="auto"
+              src="/svg/github.svg"
+            />
           </a>
           <a class="mx-2" href="mailto:contact@mtaciano.com" target="_blank">
             <img
               title="contact@mtaciano.com"
               width="28em"
+              height="auto"
               src="/svg/email.svg"
             />
           </a>
