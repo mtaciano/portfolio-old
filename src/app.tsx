@@ -1,10 +1,13 @@
-import { MetaProvider, Meta } from "@solidjs/meta";
-import { Router } from "@solidjs/router";
-import { FileRoutes } from "@solidjs/start/router";
-import { Suspense } from "solid-js";
-import Nav from "~/components/Nav";
+import "~/app.css";
 import Footer from "~/components/Footer";
-import "./app.css";
+
+import { Suspense } from "solid-js";
+import { MetaProvider } from "@solidjs/meta";
+import { Router } from "@solidjs/router";
+import { clientOnly } from "@solidjs/start";
+import { FileRoutes } from "@solidjs/start/router";
+
+const Nav = clientOnly(() => import("~/components/Nav"));
 
 export default function App() {
   return (

@@ -46,7 +46,7 @@ export default function MobileNav() {
 
   return (
     <>
-      <nav class="block sm:hidden bg-cyan-500">
+      <nav class="block bg-cyan-500">
         <div class="h-[3.25em]">
           <div use:clickOutside={() => setClicked(false)}>
             <div
