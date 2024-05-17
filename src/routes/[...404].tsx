@@ -1,4 +1,5 @@
 import Language from "~/components/Language";
+import { HttpStatusCode } from "@solidjs/start";
 
 const NOT_FOUND: { [key: string]: string } = {
   en: "Page not found",
@@ -6,6 +7,8 @@ const NOT_FOUND: { [key: string]: string } = {
 };
 
 export default function NotFound() {
+  <HttpStatusCode code={404} />;
+
   const { lang } = Language;
 
   return (
