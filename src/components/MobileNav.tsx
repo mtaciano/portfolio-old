@@ -46,12 +46,12 @@ export default function MobileNav() {
 
   return (
     <>
-      <div class="block sm:hidden bg-cyan-500">
+      <div class="block sm:hidden bg-cyan-600">
         <div class="h-[3.25em]">
           <div use:clickOutside={() => setClicked(false)}>
             <div
               onClick={toggleClicked}
-              class="transition-all duration-200 absolute rounded-sm cursor-pointer mx-[14px] my-2.5 px-[5px] py-[7px] hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-25 hover:bg-cyan-600 active:bg-cyan-700"
+              class="transition-all duration-200 absolute rounded-sm cursor-pointer mx-[14px] my-2.5 px-[5px] py-[7px] hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-25 hover:bg-cyan-700 active:bg-cyan-800"
             >
               <div class="bg-stone-50 w-6 h-1" />
               <div class="bg-stone-50 mt-1 w-6 h-1" />

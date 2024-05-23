@@ -1,7 +1,8 @@
-import { Title, Meta } from "@solidjs/meta";
-import { JSX } from "solid-js";
 import Language from "~/components/Language";
 import Anchor from "~/components/Anchor";
+
+import { JSX } from "solid-js";
+import { Title, Meta } from "@solidjs/meta";
 
 const JOB: { [key: string]: string } = {
   en: "Computer::Engineer",
@@ -15,11 +16,12 @@ const INTRODUCTION: { [key: string]: () => JSX.Element } = {
         Hello! I'm a computer engineer who recently received my bachelor's
         degree from{" "}
         <Anchor href="https://www.unifesp.br" target="_blank">
-          Universidade Federal de São Paulo
+          Unifesp
         </Anchor>{" "}
-        in Brazil. I'm interested in all computer-related fields, such as web
-        development, security and cryptography, language design, embedded
-        systems and more. My current most-used languages are C, Python and Rust.
+        (Universidade Federal de São Paulo), in Brazil. I'm interested in all
+        computer-related fields, such as web development, security and
+        cryptography, language design, embedded systems and more. My current
+        most-used languages are C, Python and Rust.
       </p>
       <p class="mt-4">
         During my time at the university, my most researched fields were Machine
@@ -110,7 +112,7 @@ export default function Home() {
 
       <main class="text-center text-stone-800">
         <div class="flex justify-center w-full">
-          <h1 class="text-cyan-950 underline underline-offset-[6px] sm:underline-offset-8 decoration-[6px] sm:decoration-8 decoration-cyan-500 sm:decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
+          <h1 class="text-cyan-950 underline underline-offset-[6px] sm:underline-offset-8 decoration-[6px] sm:decoration-8 decoration-cyan-600 -skew-y-2 font-serif text-5xl sm:text-8xl mt-6 sm:mt-10 mb-2">
             Miguel Taciano
           </h1>
         </div>
