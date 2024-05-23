@@ -1,0 +1,22 @@
+{
+  "job": "Engenheiro::de::Computação",
+  "p1": {
+    "part1": "Olá! Eu sou um recém-formado engenheiro de computação pela ",
+    "unifesp": "Unifesp",
+    "part2": " (Universidade Federal de São Paulo). Eu tenho interesse em diversos campos relacionados a computação. Alguns exemplos são: desenvolvimento web, segurança e criptografia, desenvolvimento de linguagens de programação, sistemas embarcados e mais. Minhas linguagens mais utilizadas atualmente são C, Python e Rust."
+  },
+  "p2": {
+    "part1": "Durante meu tempo na universidade, o campo de pesquisa em que mais investi foi o de aprendizado de máquina (principalmente aprendizado por reforço) e visão computacional. Durante esse período, eu desenvolvi uma abordagem de ",
+    "jigsaw": "resolução de quebra-cabeças",
+    "part2": " que utiliza segmentação semântica e aprendizado de máquina para resolver quebra-cabeças visuais."
+  },
+  "p3": {
+    "part1": "Meu outro grande projeto foi o desenvolvimento de um ",
+    "risc": "processador 32-bit RISC",
+    "part2": " utilizando FPGAs (Field-Programmable Gate Arrays) e Verilog, o qual envolveu também o desenvolvimento de um compilador para um pequeno ",
+    "cminus": "subconjunto da linguagem C",
+    "part3": ". Meu projeto atual é o desenvolvimento de um ",
+    "sol": "sucessor",
+    "part4": " do subconjunto de C desenvolvido anteriormente, mas com melhor código, mais funcionalidades e menos bugs!"
+  }
+}

@@ -1,19 +1,8 @@
-import Language from "~/components/Language";
-
-const THANKS: { [key: string]: string } = {
-  en: "Icons by",
-  ptbr: "Ícones por",
-};
-
-const MADE_WITH: { [key: string]: Array<string> } = {
-  en: ["Made with", "and"],
-  ptbr: ["Feito com", "e"],
-};
+import { useAppState } from "~/appcontext";
 
 export default function Footer() {
-  const { lang } = Language;
-  const thanks = () => THANKS[lang()];
-  const madeWith = () => MADE_WITH[lang()];
+  const ctx = useAppState();
+  const { t } = ctx;
 
   return (
     <>
@@ -76,7 +65,7 @@ export default function Footer() {
           </a>
         </div>
         <p class="pt-2">
-          {thanks()}{" "}
+          {t("global.footer.icons")}
           <a
             class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://simpleicons.org"
@@ -86,7 +75,7 @@ export default function Footer() {
           </a>
         </p>
         <p class="pt-2">
-          {madeWith()[0]}{" "}
+          {t("global.footer.made.start")}
           <a
             class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://docs.solidjs.com/solid-start"
@@ -94,7 +83,7 @@ export default function Footer() {
           >
             SolidStart
           </a>{" "}
-          {madeWith()[1]}{" "}
+          {t("global.footer.made.middle")}
           <a
             class="transition-all duration-200 inline-block text-stone-500 mx-auto border-b border-dotted border-stone-500 hover:border-solid hover:border-b-cyan-950 hover:text-cyan-950"
             href="https://tailwindcss.com/"

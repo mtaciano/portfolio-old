@@ -1,5 +1,5 @@
 import { createSignal, Show, For, onCleanup } from "solid-js";
-import Language from "~/components/Language";
+import { useAppState, Locale } from "~/appcontext";
 
 const LANG_ICON = (
   <svg class="fill-stone-50" role="img" viewBox="0 0 23 23" width={"1.625em"}>
@@ -36,12 +36,12 @@ export default function LanguageButton() {
       image: "/svg/us.svg",
     },
     {
-      code: "ptbr",
+      code: "pt",
       name: "Português",
       image: "/svg/br.svg",
     },
   ]);
-  const { setLang } = Language;
+  const ctx = useAppState();
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function LanguageButton() {
                 class="block cursor-pointer px-4 py-2 text-lg sm:text-sm text-stone-800 hover:bg-stone-100 hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-15 active:bg-stone-200"
                 role="menuitem"
                 onClick={() => {
-                  setLang(l.code);
+                  ctx.setLocale(l.code as Locale);
                 }}
               >
                 <div class="flex items-center">

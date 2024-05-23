@@ -1,18 +1,13 @@
+import { useAppState } from "~/appcontext";
 import PrefixTitle from "~/components/PrefixTitle";
-import Language from "~/components/Language";
-
-const TITLE: { [key: string]: string } = {
-  en: "Résumé",
-  ptbr: "Currículo",
-};
 
 export default function Resume() {
-  const { lang } = Language;
-  const title = () => TITLE[lang()];
+  const ctx = useAppState();
+  const { t } = ctx;
 
   return (
     <>
-      <PrefixTitle>{title()}</PrefixTitle>
+      <PrefixTitle>{t("resume.title")}</PrefixTitle>
       <main class="text-center text-stone-700">
         <h1 class="font-bold text-4xl sm:text-6xl mt-40">
           Résumé Page <br /> Under Construction.

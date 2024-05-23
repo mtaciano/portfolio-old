@@ -1,18 +1,13 @@
-import Language from "~/components/Language";
+import { useAppState } from "~/appcontext";
 import PrefixTitle from "~/components/PrefixTitle";
 
-const TITLE: { [key: string]: string } = {
-  en: "Projects",
-  ptbr: "Projetos",
-};
-
 export default function Projects() {
-  const { lang } = Language;
-  const title = () => TITLE[lang()];
+  const ctx = useAppState();
+  const { t } = ctx;
 
   return (
     <>
-      <PrefixTitle>{title()}</PrefixTitle>
+      <PrefixTitle>{t("projects.title")}</PrefixTitle>
       <main class="text-center text-stone-700">
         <h1 class="font-bold text-4xl sm:text-6xl mt-40">
           Projects Page <br /> Under Construction.

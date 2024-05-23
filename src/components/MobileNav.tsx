@@ -1,6 +1,6 @@
 import { useLocation } from "@solidjs/router";
-import { Show, createMemo, createSignal, onCleanup } from "solid-js";
-import Language from "~/components/Language";
+import { Show, createMemo, createSignal, onCleanup, For } from "solid-js";
+import { useAppState } from "~/appcontext";
 import LanguageButton from "~/components/LanguageButton";
 
 // TODO: this function is used inside the `LanguageButton`, but is marked as
@@ -21,13 +21,9 @@ declare module "solid-js" {
   }
 }
 
-const TABS: { [key: string]: Array<string> } = {
-  en: ["About", "Projects", "Blog", "Research", "Résumé"],
-  ptbr: ["Sobre", "Projetos", "Blog", "Publicações", "Currículo"],
-};
-
 export default function MobileNav() {
-  const { lang } = Language;
+  const ctx = useAppState();
+  const { t } = ctx;
   const location = useLocation();
   const basePath = createMemo(() => {
     if (location.pathname === "/") {
@@ -61,31 +57,15 @@ export default function MobileNav() {
           <ul class="container flex items-center p-2 text-stone-800">
             <Show when={clicked()}>
               <ul class="text-xl rounded-sm font-semibold absolute grid left-[3vw] z-10 mt-[18.25rem] p-2 w-[94vw] origin-top-left bg-stone-50 shadow-sm ring-1 ring-stone-800 ring-opacity-25">
-                <li class={`${active("/")} px-3 mx-1.5 my-2`}>
-                  <a class="inline-grid w-full" href="/">
-                    {TABS[lang()][0]}
-                  </a>
-                </li>
-                <li class={`${active("/projects")} px-3 mx-1.5 my-2`}>
-                  <a class="inline-grid w-full" href="/projects">
-                    {TABS[lang()][1]}
-                  </a>
-                </li>
-                <li class={`${active("/blog")} px-3 mx-1.5 my-2`}>
-                  <a class="inline-grid w-full" href="/blog">
-                    {TABS[lang()][2]}
-                  </a>
-                </li>
-                <li class={`${active("/research")} px-3 mx-1.5 my-2`}>
-                  <a class="inline-grid w-full" href="/research">
-                    {TABS[lang()][3]}
-                  </a>
-                </li>
-                <li class={`${active("/resume")} px-3 mx-1.5 my-2`}>
-                  <a class="inline-grid w-full" href="/resume">
-                    {TABS[lang()][4]}
-                  </a>
-                </li>
+                <For each={t("global.nav")}>
+                  {(nav, _) => (
+                    <li class={`${active(nav.path)} px-3 mx-1.5 my-2`}>
+                      <a class="inline-grid w-full" href={nav.path}>
+                        {nav.title}
+                      </a>
+                    </li>
+                  )}
+                </For>
               </ul>
             </Show>
             <div class="px-2 ml-auto">

@@ -1,0 +1,38 @@
+{
+  "name": "English",
+  "title": "Miguel Taciano",
+  "locale": "en-US",
+  "nav": [
+    {
+      "title": "About",
+      "path": "/"
+    },
+    {
+      "title": "Projects",
+      "path": "/projects"
+    },
+    {
+      "title": "Blog",
+      "path": "/blog"
+    },
+    {
+      "title": "Research",
+      "path": "/research"
+    },
+    {
+      "title": "Résumé",
+      "path": "/resume"
+    }
+  ],
+  "404": {
+    "header": "404",
+    "body": "Page not found"
+  },
+  "footer": {
+    "icons": "Icons by ",
+    "made": {
+      "start": "Made with ",
+      "middle": " and "
+    }
+  }
+}

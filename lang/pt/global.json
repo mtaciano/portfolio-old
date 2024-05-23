@@ -1,0 +1,38 @@
+{
+  "name": "Português",
+  "title": "Miguel Taciano",
+  "locale": "pt-BR",
+  "nav": [
+    {
+      "title": "Sobre",
+      "path": "/"
+    },
+    {
+      "title": "Projetos",
+      "path": "/projects"
+    },
+    {
+      "title": "Blog",
+      "path": "/blog"
+    },
+    {
+      "title": "Publicações",
+      "path": "/research"
+    },
+    {
+      "title": "Currículo",
+      "path": "/resume"
+    }
+  ],
+  "404": {
+    "header": "404",
+    "body": "Página não encontrada"
+  },
+  "footer": {
+    "icons": "Ícones por ",
+    "made": {
+      "start": "Feito com ",
+      "middle": " e "
+    }
+  }
+}

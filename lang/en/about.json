@@ -1,0 +1,22 @@
+{
+  "job": "Computer::Engineer",
+  "p1": {
+    "part1": "Hello! I'm a computer engineer who recently received my bachelor's degree from ",
+    "unifesp": "Unifesp",
+    "part2": " (Universidade Federal de São Paulo), in Brazil. I'm interested in all computer-related fields, such as web development, security and cryptography, language design, embedded systems and more. My current most-used languages are C, Python and Rust."
+  },
+  "p2": {
+    "part1": "During my time at the university, my most researched fields were Machine learning (mainly Reinforcement Learning) and Computer Vision. In that period, I developed a ",
+    "jigsaw": "Jigsaw Puzzle Solver",
+    "part2": " that used Semantic Segmentation and Machine Learning to solve jigsaw puzzles (visual puzzles)."
+  },
+  "p3": {
+    "part1": "My other big project was the development of a ",
+    "risc": "32-bit RISC CPU",
+    "part2": " using FPGAs (Field-Programmable Gate Arrays) and Verilog, for which I also developed an accompanying compiler based on a ",
+    "cminus": "small subset",
+    "part3": " of the C programming language. My current side project is a ",
+    "sol": "complete rewrite",
+    "part4": " of it, with better code, more features and fewer bugs!"
+  }
+}
