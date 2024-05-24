@@ -47,7 +47,7 @@ export default function LanguageButton() {
     <>
       <div
         use:clickOutside={() => setClicked(false)}
-        class="transition-all duration-200 flex justify-center rounded-sm hover:bg-cyan-700 focus-within:ring-1 focus-within:ring-cyan-700 focus-within:ring-opacity-25 focus-within:bg-cyan-700 active:bg-cyan-800 p-1"
+        class="transition-all duration-200 flex justify-center rounded-sm hover:bg-cyan-800 sm:bg-cyan-700 focus-within:ring-1 sm:ring-1 ring-cyan-800 focus-within:bg-cyan-800 active:bg-cyan-900 p-1"
       >
         <button onclick={toggleClicked} type="button">
           {LANG_ICON}

@@ -42,12 +42,12 @@ export default function MobileNav() {
 
   return (
     <>
-      <div class="block sm:hidden bg-cyan-600">
+      <div class="block sm:hidden bg-gradient-to-b from-cyan-700 to-cyan-600">
         <div class="h-[3.25em]">
           <div use:clickOutside={() => setClicked(false)}>
             <div
               onClick={toggleClicked}
-              class="transition-all duration-200 absolute rounded-sm cursor-pointer mx-[14px] my-2.5 px-[5px] py-[7px] hover:ring-1 hover:ring-cyan-800 hover:ring-opacity-25 hover:bg-cyan-700 active:bg-cyan-800"
+              class="transition-all duration-200 absolute rounded-sm cursor-pointer mx-[14px] my-2.5 px-[5px] py-[6px] hover:ring-1 hover:ring-cyan-800 hover:bg-cyan-800 active:bg-cyan-900"
             >
               <div class="bg-stone-50 w-6 h-1" />
               <div class="bg-stone-50 mt-1 w-6 h-1" />
@@ -68,8 +68,51 @@ export default function MobileNav() {
                 </For>
               </ul>
             </Show>
-            <div class="px-2 ml-auto">
-              <LanguageButton />
+            <div class="flex font-normal px-2 ml-auto">
+              <div class="mr-2 flex flex-row justify-center items-center">
+                <a
+                  class="mx-2"
+                  href="https://www.linkedin.com/in/mtaciano"
+                  target="_blank"
+                >
+                  <img
+                    title="LinkedIn"
+                    width="26em"
+                    class="filter invert"
+                    height="auto"
+                    src="/svg/linkedin.svg"
+                  />
+                </a>
+                <a
+                  class="mx-2"
+                  href="https://www.github.com/mtaciano"
+                  target="_blank"
+                >
+                  <img
+                    title="GitHub"
+                    width="26em"
+                    class="filter invert"
+                    height="auto"
+                    src="/svg/github.svg"
+                  />
+                </a>
+                <a
+                  class="mx-2"
+                  href="mailto:contact@mtaciano.com"
+                  target="_blank"
+                >
+                  <img
+                    title="contact@mtaciano.com"
+                    width="26em"
+                    class="filter invert"
+                    height="auto"
+                    src="/svg/email.svg"
+                  />
+                </a>
+              </div>
+              <div class="block">
+                <LanguageButton />
+              </div>
             </div>
           </ul>
         </div>

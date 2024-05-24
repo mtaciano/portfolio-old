@@ -1,8 +1,7 @@
+import "./app.css";
 import { AppContextProvider } from "~/appcontext";
 import Nav from "~/components/Nav";
 import Footer from "~/components/Footer";
-import "./app.css";
-
 import { Suspense } from "solid-js";
 import { MetaProvider } from "@solidjs/meta";
 import { Router } from "@solidjs/router";

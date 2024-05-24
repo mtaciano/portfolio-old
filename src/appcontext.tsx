@@ -1,6 +1,8 @@
 import { dict as en_dict } from "../lang/en/en";
 import {
+  JSX,
   ParentComponent,
+  ParentProps,
   Suspense,
   createContext,
   createEffect,
@@ -49,8 +51,9 @@ interface Settings {
   locale: Locale;
 }
 
-const toLocale = (string: string): Locale | undefined =>
-  string in raw_dict_map ? (string as Locale) : undefined;
+function toLocale(str: string): Locale | undefined {
+  return str in raw_dict_map ? (str as Locale) : undefined;
+}
 
 function initialLocale(location: router.Location): Locale {
   let locale: Locale | undefined;
@@ -96,9 +99,11 @@ interface AppState {
 }
 
 const AppContext = createContext<AppState>({} as AppState);
-export const useAppState = () => useContext(AppContext);
+export function useAppState(): AppState {
+  return useContext(AppContext);
+}
 
-export const AppContextProvider: ParentComponent = (props) => {
+export function AppContextProvider(props: ParentProps): JSX.Element {
   const location = router.useLocation();
 
   const now = new Date();
@@ -106,7 +111,7 @@ export const AppContextProvider: ParentComponent = (props) => {
     expires: new Date(now.getFullYear() + 1, now.getMonth(), now.getDate()),
   };
 
-  const [settings, set] = storage.makePersisted(
+  const [settings, setSettings] = storage.makePersisted(
     createStore(initialSettings(location)),
     {
       storageOptions: cookieOptions,
@@ -132,8 +137,8 @@ export const AppContextProvider: ParentComponent = (props) => {
       return settings.locale;
     },
     setLocale(value) {
-      void startTransition(() => {
-        set("locale", value);
+      startTransition(() => {
+        setSettings("locale", value);
       });
     },
     t,
@@ -148,4 +153,4 @@ export const AppContextProvider: ParentComponent = (props) => {
       </AppContext.Provider>
     </Suspense>
   );
-};
+}
